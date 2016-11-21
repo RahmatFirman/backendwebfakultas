@@ -21,6 +21,11 @@ class Prestasi_model extends CI_Model
 			);
 			return $this->db->insert('prestasi',$data);    
 	}
+	public function getPrestasiById($id)
+	{
+		$query = $this->db->get_where('prestasi', array('id' => $id));
+		return $query->row_array(); 
+	}
 }
 
 ?>

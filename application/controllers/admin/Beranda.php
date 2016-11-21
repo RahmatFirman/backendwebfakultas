@@ -1,13 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Beranda extends CI_Controller {
 
-	public function index()
-	{
-		echo 'index';
-	}
-	public function beranda($halaman = 'beranda')
+	public function index($halaman = 'beranda')
 	{
 		if (!file_exists(APPPATH."views/".$halaman.'.php'))
 		{
@@ -16,5 +12,9 @@ class Admin extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view($halaman);
 		$this->load->view('template/footer');
+		
 	}
+
+	
+
 }

@@ -32,22 +32,25 @@ class Prestasi extends CI_Controller {
 		else
 		{
 			$this->prestasi_model->addPrestasi();
-			redirect('prestasi');
+			redirect('admin/prestasi');
 		}
 
 	}
-	public function editPrestasi($id)
+	public function edit($id)
 	{
+		
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('nama','Nama','required');
 		$this->form_validation->set_rules('prestasi','Prestasi','required');
 		$this->form_validation->set_rules('tahun','Tahun','required');
+		
 		if($this->form_validation->run() === FALSE)
 		{
+		$data['prestasi_id'] = $this->prestasi_model->getPrestasiById($id);
 		$this->load->view('template/header');
-		$this->load->view('prestasi/editPrestasi');
+		$this->load->view('prestasi/editPrestasi',$data);
 		}
 		else
 		{
