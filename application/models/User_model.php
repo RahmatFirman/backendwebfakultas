@@ -1,6 +1,6 @@
 <?php
 	
-class Prestasi_model extends CI_Model
+class User_model extends CI_Model
 {
 	public function __construct()
 	{

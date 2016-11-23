@@ -12,7 +12,7 @@ foreach ($prestasi as $a)
 			<tr>
 				<td>'.$a['nama'].'</td>
 				<td>'.$a['prestasi'].'</td>
-				<td><button><a href="#"">Edit</a></button><button><a href="#">Delete</a></button></td>
+				<td><button><a href="'.base_url().'admin/prestasi/edit/'.$a['id'].'"">Edit</a></button><button><a href="'.base_url().'admin/prestasi/delete/'.$a['id'].'">Delete</a></button></td>
 			</tr>
 		
 		
