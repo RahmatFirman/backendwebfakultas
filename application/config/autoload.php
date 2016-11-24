@@ -3,7 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $autoload['packages'] = array();
 
+<<<<<<< HEAD
 $autoload['libraries'] = array('database');
+=======
+$autoload['libraries'] = array('session','database');
+>>>>>>> 499e51b68fd249744784c828d5aa73bb0d0e09fb
 
 $autoload['drivers'] = array();
 
@@ -15,7 +19,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url','file','form');
 
 /*
 | -------------------------------------------------------------------
