@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+$route['news']='admins/berita_c';
 $route['prestasi'] = 'prestasi';
 $route['prestasi/add'] = 'prestasi/add';
 $route['prestasi/edit/(:any)'] = 'prestasi/edit/$1';
@@ -11,3 +11,4 @@ $route['default_controller'] = 'admin/beranda';
 $route['(:any)'] = 'admin/beranda/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
