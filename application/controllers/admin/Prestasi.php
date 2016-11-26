@@ -19,36 +19,44 @@
 
  	public function add()
  	{
- 		$this->load->helper('form');
- 		$this->load->library('form_validation');
-
- 		$this->form_validation->set_rules('nama','Nama','required');
- 		$this->form_validation->set_rules('prestasi','Prestasi','required');
- 		$this->form_validation->set_rules('tahun','Tahun','required');
- 		$config['upload_path'] = "./images/";
- 		$congig['allowed_types'] = 'jpg|jpeg|gif|png';  
- 		$this->load->library('upload',$config);
- 		if($this->upload->do_upload('berkas'))
- 		{
- 			$data = array('upload_')
-
- 			if($this->form_validation->run() === FALSE)
+ 		
+ 			$this->load->helper('form','date');
+ 			$this->load->library('form_validation');
+ 			$this->form_validation->set_rules('nama','Nama','required');
+ 			$this->form_validation->set_rules('prestasi','Prestasi','required');
+ 			$this->form_validation->set_rules('tahun','Tahun','required');
+ 			$config['upload_path']  = '../backendwebfakultas/public/upload/prestasi';
+ 			$config['allowed_types'] = 'jpg|jpeg|png|gif|PNG|JPEG|JPG|GIF';
+ 			$config['max_size']  = 2048;
+ 			$config['file_name']  = now('Asia/Makassar').'_'.'prestasi';
+ 			$this->load->library('upload',$config);
+ 			if(!$this->upload->do_upload('foto'))
  			{
- 				$this->load->view('admin/template/header');
+ 				$data['error_file'] = $this->upload->display_errors();
+
+ 			}
+ 			if($this->form_validation->run()===FALSE)
+ 			{
+
  				$this->load->view('admin/prestasi/addPrestasi');
  			}
  			else
  			{
- 				$this->prestasi_model->addPrestasi();
+ 				$fields = array(
+ 				'prestasi' => $this->input->post('prestasi'),
+ 				'tahun' => $this->input->post('tahun'),
+ 				'nama' => $this->input->post('nama'),
+ 				'foto' =>$config['file_name'].$this->upload->data('file_ext')
+ 				);
+ 				$this->prestasi_model->addPrestasi($fields);
  				redirect('admin/prestasi');
  			}
-
- 		}
+ 		
 
  	}
  	public function edit($id = FALSE)
  	{
-
+ 			
  		$this->load->helper('form');
  		$this->load->library('form_validation');
 
@@ -65,13 +73,18 @@
  		else
  		{
  			$this->prestasi_model->updatePrestasi($id);
+ 			$this->session->set_flashdata('Sukses','Prestasi berhasil di edit');
  			redirect('admin/prestasi');
  		}
  	}
- 	public function delete($id = FALSE)
+ 	public function delete($id)
  	{
- 		$this->prestasi_model->deletePrestasi($id);
+ 		$data = $this->prestasi_model->getPrestasiById($id);
+ 		$a = $data['foto'];
+ 		unlink('../backendwebfakultas/public/upload/prestasi/'.$a);
+ 		$file = $this->prestasi_model->deletePrestasi($id);
  		redirect('admin/prestasi');
  	}
+
 
  }
