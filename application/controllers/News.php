@@ -1,26 +1,21 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php  
+class News extends CI_Controller{  
+	 function __construct(){  
+        parent::__construct();  
+        $this->load->model('berita_m'); //me-load kelas tulisan_m pada model  
+    }  
+    function index(){  
+       
+        $data['tulisan']=$this->berita_m->get_tulisan(); 
+//memanggil fungsi pada kelas yang sudah dipanggil  
+        $this->load->view('news/berita/show_v',$data);
+    }  
 
-class News extends CI_Controller {
+   function tulisan_page($id){
+   	$data['satutulisan']=$this->berita_m->get_1_tulisan($id);
+   	$this->load->view('news/berita/single_v',$data);
+   }
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
-	
-}
+   
+}  
+?>  
