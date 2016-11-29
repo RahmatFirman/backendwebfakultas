@@ -15,7 +15,7 @@ if (!isset($tulisan)){
     foreach ($tulisan as $row) {  
         ?>  
 
-        <h3><a href="<?=base_url()?>admins/berita_c/tulisan_page/<?=$row['id_tulisan']?>"> <?=$row['judul']?></a>
+        <h3><a href="<?=base_url()?>news/view/<?=$row['id_tulisan']?>"> <?=$row['judul']?></a>
             </a> </h3>  
         <p><?=substr(strip_tags($row['isi']),0,200)."…"?></p>  
         <?php  

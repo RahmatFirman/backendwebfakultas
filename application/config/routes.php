@@ -3,12 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 //route news
 
-$route['admin/news']='admins/berita_c';
+$route['admin/news']='admin/berita_c';
 
 
 
-
-$route['news']='admins/berita_c';
+$route['news'] = 'news';
+$route['admin/news']='admin/berita_c';
 
 $route['prestasi'] = 'prestasi';
 $route['prestasi/add'] = 'prestasi/add';
@@ -19,7 +19,7 @@ $route['prestasi/(:any)'] = 'prestasi/view/$1';
 $route['admin/register'] = 'user/register';
 $route['admin/login'] = 'user/login';
 $route['admin/logout'] = 'user/logout';
-
+$route['admin'] = 'user/login';
 // route admin dashboard
 //$route['admin'] = 'auth';
 //$route['admin/login'] = 'auth/login';

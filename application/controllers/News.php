@@ -11,11 +11,11 @@ class News extends CI_Controller{
         $this->load->view('news/berita/show_v',$data);
     }  
 
-   function tulisan_page($id){
+   function view($id){
    	$data['satutulisan']=$this->berita_m->get_1_tulisan($id);
    	$this->load->view('news/berita/single_v',$data);
    }
-
+   
    
 }  
 ?>  

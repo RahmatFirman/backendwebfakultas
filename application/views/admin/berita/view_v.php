@@ -18,7 +18,7 @@ if (!isset($tulisan)){
     foreach ($tulisan as $row) {  
         echo'  
 
-        <h3><a href="<?=base_url()?>admin/berita_c/tulisan_page/'.$row['id_tulisan'].'">'.$row['judul'].'</a>
+        <h3>'.$row['judul'].'
         <a href="'.base_url().'admin/berita_c/edit_tulisan/'.$row['id_tulisan'].'">  
                 <span style="color:gray">Edit</span> </a>
                 <a href="'.base_url().'admin/berita_c/hapus_tulisan/'.$row['id_tulisan'].'">  
