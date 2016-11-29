@@ -8,7 +8,9 @@ $route['admin/beranda'] = 'admin/beranda';
 $route['admin/prestasi'] = 'admin/prestasi';
 $route['admin/prestasi/add'] = 'admin/prestasi/add';
 
-$route['news'] = 'news'; 
+$route['admin/news'] = 'admin/berita_c'; 
+//$route['admin/news/view/(:any)'] = 'admin/berita_c/tulisan_page/$1'; 
+//$route['admin/news/delete/(:any)'] = 'admin/berita_c/hapus_tulisan/$1'; 
 
 //$route['admin/prestasi/(:any)'] = 'prestasi/view/$1';
 $route['admin/prestasi/edit/(:any)'] = 'admin/prestasi/edit/$1'; // dia sebenarnya route ke folder admin baru masuk ke controller class prestasi method edit admin/prestasi/edit/parameter
