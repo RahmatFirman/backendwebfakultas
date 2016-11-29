@@ -5,7 +5,8 @@
 			<div class="page-header">
 				<h1>Login success!</h1>
 			</div>
-			<p>You are now logged in.</p>
+			<p>You are now logged in.</p><a href="<?= base_url() ?>">[Home]</a>
+			
 		</div>
 	</div><!-- .row -->
 </div><!-- .container -->
