@@ -1,5 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+<<<<<<< HEAD
+$route['news']='admins/berita_c';
+$route['prestasi'] = 'prestasi';
+$route['prestasi/add'] = 'prestasi/add';
+$route['prestasi/edit/(:any)'] = 'prestasi/edit/$1';
+$route['prestasi/(:any)'] = 'prestasi/view/$1';
+=======
 // route admin dashboard
 $route['admin'] = 'auth';
 $route['admin/login'] = 'auth/login';
@@ -15,6 +22,7 @@ $route['admin/news'] = 'admin/berita_c';
 //$route['admin/prestasi/(:any)'] = 'prestasi/view/$1';
 $route['admin/prestasi/edit/(:any)'] = 'admin/prestasi/edit/$1'; // dia sebenarnya route ke folder admin baru masuk ke controller class prestasi method edit admin/prestasi/edit/parameter
 $route['admin/prestasi/delete/(:any)'] = 'admin/prestasi/delete/$1';
+>>>>>>> 499e51b68fd249744784c828d5aa73bb0d0e09fb
 
 $route['(:any)'] = 'admin/beranda/$1';
 
@@ -25,3 +33,4 @@ $route['prestasi'] = 'prestasi_control';
 $route['(:any)'] = 'welcome/page/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
