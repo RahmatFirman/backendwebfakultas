@@ -11,6 +11,7 @@ class Prestasi_control extends CI_Controller {
 	}
 	public function index()
 	{
+		
 		//$this->load->view('admin/template/header');
 		$data['result'] = $this->prestasi_model->getPrestasi();
 		$this->load->view('prestasi',$data);

@@ -7,6 +7,8 @@ $autoload['packages'] = array();
 $autoload['libraries'] = array('session','database');
 
 
+
+
 $autoload['drivers'] = array();
 
 /*
@@ -17,7 +19,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','file','form');
+$autoload['helper'] = array('url','file','form','date');
 
 /*
 | -------------------------------------------------------------------

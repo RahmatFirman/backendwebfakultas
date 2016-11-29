@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<a href="http://localhost/backendwebfakultas/admin">Admin</a>
+		<a href="http://localhost/backendwebfakultas/admin/login">Admin</a>
 		<a href="http://localhost/backendwebfakultas/prestasi">Prestasi</a>
 		<a href="http://localhost/backendwebfakultas/news">News</a>
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>

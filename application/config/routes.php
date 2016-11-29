@@ -1,24 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 //route news
-$route['news'] = 'News'; 
+
 $route['admin/news']='admins/berita_c';
 
 
 
+
+$route['news']='admins/berita_c';
 
 $route['prestasi'] = 'prestasi';
 $route['prestasi/add'] = 'prestasi/add';
 $route['prestasi/edit/(:any)'] = 'prestasi/edit/$1';
 $route['prestasi/(:any)'] = 'prestasi/view/$1';
 
+// route administrator
+$route['admin/register'] = 'user/register';
+$route['admin/login'] = 'user/login';
+$route['admin/logout'] = 'user/logout';
+
 // route admin dashboard
-$route['admin'] = 'auth';
-$route['admin/login'] = 'auth/login';
-$route['admin/logout'] = 'auth/logout';
+//$route['admin'] = 'auth';
+//$route['admin/login'] = 'auth/login';
+//$route['admin/logout'] = 'auth/logout';
 $route['admin/beranda'] = 'admin/beranda';
 $route['admin/prestasi'] = 'admin/prestasi';
 $route['admin/prestasi/add'] = 'admin/prestasi/add';
+
+
+
 
 
 
