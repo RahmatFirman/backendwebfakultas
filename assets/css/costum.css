@@ -1,0 +1,105 @@
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.page-header{
+	text-align: center;
+	
+}
+
+.img-responsive2 {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-pills li {
+    margin-left: 20px; //use whatever you want
+} 
+
+
+#wrap {
+min-height: 100%;
+}
+ 
+#main {
+overflow:auto;
+padding-bottom:150px; /* this needs to be bigger than footer height*/
+
+}
+ 
+.footer {
+position: relative;
+
+height: 410px;
+width: 100%;
+clear:both;
+padding-top:20px;
+background-color: black;
+color: white;
+
+}
+
+#kiri{
+float: left;
+width: 670px;
+margin :10px;
+padding:0 10px;
+
+}
+
+#kanan{
+font-size: 20px; 
+float: right;
+width: 400px;
+height: 450px;
+background-color: #418bca;
+}
+
+
+
+.nav-pills > li > a {
+    font-size: 15px;
+    color: #37404e;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+
+.nav-pills > li > a:hover {
+    background-color: #418bca;
+    color: #fff;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #37404e;
+    color: #fff;
+}
+
+.dropdown-header {
+    color: #418bca;
+}
+
+.col-md-4 {
+    line-height: 13px;
+}
+
+.copyright {
+    position: absolute;
+    background-color: #1f1f1f;
+    padding-left: 10px;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.9em;
+    text-align: left;
+    bottom:0;
+    margin-top: 20px;
+}
+
+#tes{
+    color: #A3A3B4;
+}
+
+
+

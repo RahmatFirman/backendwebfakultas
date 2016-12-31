@@ -12,7 +12,7 @@ if (!isset($satutulisan['isi'])){
         <h3><?=$satutulisan['judul']?></h3> 
         <?=$satutulisan['waktu']?> 
         <p><?=$satutulisan['isi']?></p>  
-        <?php  
+        
 }?>  
 </body>  
 </html>  
